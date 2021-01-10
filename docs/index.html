@@ -2,95 +2,29 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>我的博客</title>
-  <style>
-    html, body {
-      padding: 0;
-      margin: 0;
-    }
-    html {
-      height: 100%;
-    }
-    body {
-      min-height: 100%;
-      display: flex;
-      /* font-family: "Helvetica Neue",Arial,"Hiragino Sans GB",STHeiti,"Microsoft YaHei"; */
-    }
-    a {
-      text-decoration: none;
-    }
-    #main {
-      order: 1;
-      padding: 0 30px;
-      display: flex;
-      flex-direction: column;
-    }
-    section {
-      flex-grow: 1;
-      padding-bottom: 30px;
-    }
-    section h2 {
-      font-size: 2rem;
-      font-weight: normal;
-    }
-    section p {
-      line-height: 180%;
-    }
-    article {
-      position: relative;
-      padding-bottom: 30px;
-      border-bottom: solid 1px #ccc;
-    }
-    article a {
-      color: #333;
-    }
-    .pubtime {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    footer {
-      text-align: center;
-      line-height: 60px;
-      border-top: solid 1px #ccc;
-    }
-    #sidebar {
-      flex-shrink: 0;
-      width: 230px;
-      background-color: #222;
-      color: #999;
-    }
-    #sidebar a {
-      color: #999;
-    }
-    #profile {
-      text-align: center;
-      padding-top: 40px;
-    }
-    #profile h1 {
-      font-size: 1.5rem;
-      font-weight: normal;
-    }
-    #avatar img {
-      width: 150px;
-    }
-    #navigator {
-      padding-left: 40px;
-      line-height: 30px;      
-    }
-  </style>
+  <title>STUDY RECORD</title>
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 <body>
   <div id="main">
+    <!-- 一个搜索栏 -->
+    <section id="search" class="search-container">
+      <form>
+        <input class="search-input" type="text" placeholder="请输入要搜索的内容">
+        <input class="search-button" type="button" value="搜索" onclick="alert(s)">
+      </form>
+      <br>
+  </section>
+
     <!--文章区-->
     <section>
       <article>
-        <h2><a href="articles/01.html">我的第一篇文章</a></h2>
+        <h2><a href="articles/01.html">作业1：新闻稿</a></h2>
         <p>正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要</p>
-        <div class="pubtime">发布时间：<em>2018-12-08</em></div>
+        <div class="pubtime">发布时间：<em>2020-12-13</em></div>
         <div class="readmore"><a href="articles/01.html">阅读全文</a></div>
       </article>
-      <article>
+      <!-- <article>
         <h2><a href="articles/02.html">我的第二篇文章</a></h2>
         <p>正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要</p>
         <div class="pubtime">发布时间：<em>2018-12-08</em></div>
@@ -101,19 +35,19 @@
         <p>正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要正文摘要</p>
         <div class="pubtime">发布时间：<em>2018-12-08</em></div>
         <div class="readmore"><a href="articles/03.html">阅读全文</a></div>
-      </article>
+      </article> -->
     </section>
     <!--列表区-->
     <footer>
-      &copy;2018 - 我的博客 - 君喻学堂
+      &copy;2020 - StudyRecord - 斯旺西
     </footer>
   </div>
   <div id="sidebar">
     <div id="profile">
       <div id="avatar">
-        <a href="about.html"><img src="static/image/myavatar.png"></a>
+        <a href="about.html"><img src="static/image/art.jpg"></a>
       </div>
-      <h1>我的博客</h1>
+      <h1>Study Record</h1>
     </div>
     <div id="navigator">
       <div><a href="index.html">首页</a></div>
@@ -129,11 +63,12 @@
 
     let title = document.title;
     window.addEventListener('blur', () => {
-      document.title = '记得回来看我啊~';
+      document.title = '丢失焦点了~';
     });
     window.addEventListener('focus', () => {
       document.title = title;
     });
+    let s = "暂不支持该功能";
   </script>
 </body>
 </html>
